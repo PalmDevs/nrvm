@@ -11,7 +11,7 @@ import styled from 'styled-components'
 //         transition: all 0.25s;
 
 //         &:hover {
-//             cursor: ${(props: ExtraLinkProps) => props.disabled ? 'not-allowed' : 'hover'};
+//             cursor: ${(props: ExtraLinkProps) => props.disabled ? 'not-allowed' : 'pointer'};
 //             filter: brightness(125%);
 //         }
 //     `
@@ -31,9 +31,10 @@ export function ExtendedLink(props: ExtraLinkProps & LinkProps) {
         padding-right: 1.125rem;
         border-radius: 1rem 1rem;
         transition: all 0.25s;
+        
 
         &:hover {
-            cursor: ${(props: ExtraLinkProps) => props.disabled ? 'not-allowed' : 'hover'};
+            cursor: ${(props: ExtraLinkProps) => props.disabled ? 'not-allowed' : 'pointer'};
             filter: brightness(75%);
         }
     `
