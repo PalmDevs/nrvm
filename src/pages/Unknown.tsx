@@ -6,7 +6,7 @@ export default function UnknownPage() {
     return (
         <Page>
             <DocumentTitle title='NRVM ➜ 404' />
-            <PageIcon src='/assets/icons/404.svg' />
+            <PageIcon src='/assets/icons/error.svg' />
             <PageTitle>Seems like you're lost...</PageTitle>
             <PageDescription>
                 This link leads to nowhere. As known as, the <strong>void</strong>...
