@@ -1,3 +1,3 @@
-export default DependenciesPage() {
+export default function DependenciesPage() {
     return null
 }
