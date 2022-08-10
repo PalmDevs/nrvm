@@ -1,5 +1,5 @@
-import { PrimaryLink } from '../components/Link'
-import { Page, PageDescription, PageIcon, PageTitle } from '../components/Pages'
+import { PrimaryLink } from '../components/ui/Links'
+import { Page, PageDescription, PageIcon, PageTitle } from '../components/ui/Page'
 import DocumentTitle from '../util/DocumentTitle'
 
 export default function MainPage() {

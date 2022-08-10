@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Page = styled.div`
-    background-color: var(--bg-clr);
+    background-color: var(--bg-pr-clr);
     color: var(--tx-pr-clr);
 
     width: 100vw;
@@ -38,8 +38,12 @@ export const PageDescription = styled(PageDescriptionBase)`
     color: var(--tx-sc-clr);
 `
 
-export const PageUnimportantDescription = styled(PageDescriptionBase)`
-    color: var(--tx-td-clr)
+export const PageSecondaryDescription = styled(PageDescriptionBase)`
+    color: var(--tx-sc-clr);
+`
+
+export const PageTertiaryDescription = styled(PageDescriptionBase)`
+    color: var(--tx-td-clr);
 `
 
 export interface PageIconProps {

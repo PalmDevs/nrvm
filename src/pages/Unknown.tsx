@@ -1,5 +1,5 @@
-import { PrimaryLink } from '../components/Link'
-import { Page, PageDescription, PageIcon, PageTitle } from '../components/Pages'
+import { PrimaryLink } from '../components/ui/Links'
+import { Page, PageDescription, PageIcon, PageTitle } from '../components/ui/Page'
 import DocumentTitle from '../util/DocumentTitle'
 
 export default function UnknownPage() {
@@ -7,9 +7,9 @@ export default function UnknownPage() {
         <Page>
             <DocumentTitle title='NRVM ➜ 404' />
             <PageIcon src='/assets/icons/error.svg' />
-            <PageTitle>Seems like you're lost...</PageTitle>
+            <PageTitle>Where are you going?</PageTitle>
             <PageDescription>
-                This link leads to nowhere. As known as, the <strong>void</strong>...
+                You're lost! This link leads to nowhere...
                 <br />
                 Click the button to go back to the country roads.</PageDescription>
             <PrimaryLink to='/'>Take me home!</PrimaryLink>

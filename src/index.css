@@ -2,13 +2,15 @@
 
 body {
     margin: 0 0 0 0;
-    background-color: var(--bg-clr);
+    background-color: var(--bg-pr-clr);
 }
 
 * {
-    --bg-clr: #252525;
+    --bg-pr-clr: #252525;
+    --bg-sc-clr: #343738;
+    --bg-td-clr: #697680;
     --tx-pr-clr: #EFEFEF;
-    --tx-sc-clr: #DDD;
+    --tx-sc-clr: #D4D4D4;
     --tx-td-clr: #888;
 
     font-family: 'Roboto', sans-serif;
