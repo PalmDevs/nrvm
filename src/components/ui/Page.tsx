@@ -1,6 +1,16 @@
 import styled from 'styled-components'
+import { motion, Variants } from 'framer-motion'
+import { ReactNode } from 'react'
 
-export const Page = styled.div`
+
+export const PageAnimations: Variants = {
+    enter: { opacity: 0 },
+    stay: { opacity: 1 },
+    exit: { opacity: 0 }
+}
+
+
+export const BasePage = styled(motion.div)`
     background-color: var(--bg-pr-clr);
     color: var(--tx-pr-clr);
 
@@ -12,6 +22,15 @@ export const Page = styled.div`
     justify-content: center;
     flex-direction: column;
 `
+
+
+export function Page({ children }: PageProps) {
+    return (
+        <BasePage variants={PageAnimations} initial='enter' animate='stay' exit='exit'>
+            {children}
+        </BasePage>
+    )
+}
 
 export const PageIcon = styled.img`
     width: 16rem;
@@ -45,6 +64,11 @@ export const PageSecondaryDescription = styled(BasePageDescription)`
 export const PageTertiaryDescription = styled(BasePageDescription)`
     color: var(--tx-td-clr);
 `
+
+
+export interface PageProps {
+    children?: ReactNode
+}
 
 export interface PageIconProps {
     src: string

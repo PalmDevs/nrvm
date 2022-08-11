@@ -3,6 +3,7 @@
 body {
     margin: 0 0 0 0;
     background-color: var(--bg-pr-clr);
+    overflow: hidden;
 }
 
 p {
@@ -16,6 +17,11 @@ p {
     --tx-pr-clr: #EFEFEF;
     --tx-sc-clr: #D4D4D4;
     --tx-td-clr: #888;
+
+    --accent-pr: #2b6be2;
+    --accent-sc: #696969;
+    --accent-ss: #03aa72;
+    --accent-dr: #cf4229;
 
     font-family: 'Roboto', sans-serif;
 }
