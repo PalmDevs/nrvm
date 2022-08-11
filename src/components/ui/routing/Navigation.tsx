@@ -1,7 +1,7 @@
 import { MouseEventHandler, ReactNode } from 'react'
 import { IconType } from 'react-icons'
 import styled from 'styled-components'
-import { DynamicLink } from './Links'
+import { DynamicLink } from './Link'
 
 const NavIconButtonElement = styled(DynamicLink)`
     width: 4rem;
@@ -28,12 +28,16 @@ export function NavIconButton(props: NavIconButtonProps) {
     </NavIconButtonElement>
 }
 
-export function NavContainer({ children, location }: { children: ReactNode, location: 'left' | 'right' }) {
-    return <div style={{ display: 'grid', columnGap: '1rem', rowGap: '1rem', gridAutoFlow: 'column', margin: '1rem', position: 'absolute', bottom: 0, [location]: 0 }}>
+export function NavContainer({ children, location }: NavContainerProps) {
+    return <div style={{ display: 'grid', columnGap: '1rem', rowGap: '1rem', gridAutoFlow: 'column', margin: '1rem', position: 'fixed', bottom: 0, [location]: 0 }}>
         {children}
     </div>
 }
 
+export interface NavContainerProps {
+    children?: ReactNode
+    location: 'left' | 'right'
+}
 
 export type NavIconButtonProps = {
     icon: IconType
