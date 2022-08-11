@@ -1,4 +1,4 @@
-import { PrimaryLink } from '../components/ui/Links'
+import { PrimaryLink } from '../components/ui/routing/Link'
 import { Page, PageDescription, PageIcon, PageTitle } from '../components/ui/Page'
 import DocumentTitle from '../util/DocumentTitle'
 

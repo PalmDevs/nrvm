@@ -5,10 +5,14 @@ body {
     background-color: var(--bg-pr-clr);
 }
 
+p {
+    max-width: 85vw;
+}
+
 * {
     --bg-pr-clr: #252525;
     --bg-sc-clr: #343738;
-    --bg-td-clr: #697680;
+    --bg-td-clr: #383b41;
     --tx-pr-clr: #EFEFEF;
     --tx-sc-clr: #D4D4D4;
     --tx-td-clr: #888;

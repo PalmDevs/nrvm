@@ -1,9 +1,9 @@
 import { BiArrowBack } from 'react-icons/bi'
 import { BsPeopleFill, BsGithub } from 'react-icons/bs'
 import { Outlet } from 'react-router-dom'
-import { NavContainer, NavIconButton } from '../../components/ui/Navigation'
+import { NavContainer, NavIconButton } from '../../components/ui/routing/Navigation'
 
-export default function WithBottomNavbar({ showBackButton = false }: { showBackButton?: boolean }) {
+export default function WithBottomNavbar({ showBackButton = false }: WithBottomNavbarProps) {
     console.log(showBackButton)
     return (
         <>
@@ -18,4 +18,8 @@ export default function WithBottomNavbar({ showBackButton = false }: { showBackB
             </NavContainer>
         </>
     )
+}
+
+export interface WithBottomNavbarProps {
+    showBackButton?: boolean
 }
