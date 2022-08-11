@@ -16,11 +16,13 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<><MainPage /><WithBottomNavbar /></>} />
-        { /* Only show back button if link isn't just `/` */}
+        <Route path='/' element={<WithBottomNavbar />}>
+            <Route index element={<MainPage />} />
+            <Route path='*' element={<UnknownPage />} />
+        </Route>
+
         <Route path='/*' element={<WithBottomNavbar showBackButton />}>       
           <Route path='about' element={<AboutPage />} />
-          <Route path='*' element={<UnknownPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
