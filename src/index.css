@@ -3,7 +3,7 @@
 body {
     margin: 0 0 0 0;
     background-color: var(--bg-pr-clr);
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 p {
