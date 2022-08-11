@@ -67,7 +67,16 @@ export function BaseLink(props: ExtraLinkProps & LinkProps) {
 
 export const PrimaryLink = styled(BaseLink)`
     color: var(--tx-pr-clr);
-    background-color: #2b6be2;
+    background-color: var(--accent-pr);
+`
+export const SecondaryLink = styled(PrimaryLink)`
+    background-color: var(--accent-sc);
+`
+export const SuccessLink = styled(PrimaryLink)`
+    background-color: var(--accent-ss);
+`
+export const DangerLink = styled(PrimaryLink)`
+    background-color: var(--accent-dr);
 `
 
 
