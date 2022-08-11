@@ -4,7 +4,6 @@ import { Outlet } from 'react-router-dom'
 import { NavContainer, NavIconButton } from '../../components/ui/routing/Navigation'
 
 export default function WithBottomNavbar({ showBackButton = false }: WithBottomNavbarProps) {
-    console.log(showBackButton)
     return (
         <>
             <Outlet />
