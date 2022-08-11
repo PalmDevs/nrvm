@@ -5,7 +5,7 @@ import ContributorsList from '../../data/Contributors'
 export const ContributorContainer = styled.div`
     margin: 0.75rem;
     background-color: var(--bg-td-clr);
-    width: 27.5rem;
+    width: 50vmin;
     border-radius: 0.75rem;
     padding: 1rem;
 `
