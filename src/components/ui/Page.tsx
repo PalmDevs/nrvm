@@ -27,22 +27,22 @@ export const PageTitle = styled.p`
     text-align: center;
 `
 
-const PageDescriptionBase = styled.p`
+const BasePageDescription = styled.p`
     font-weight: normal;
     font-size: 1.125rem;
     margin: 0;
     text-align: center;
 `
 
-export const PageDescription = styled(PageDescriptionBase)`
+export const PageDescription = styled(BasePageDescription)`
     color: var(--tx-sc-clr);
 `
 
-export const PageSecondaryDescription = styled(PageDescriptionBase)`
+export const PageSecondaryDescription = styled(BasePageDescription)`
     color: var(--tx-sc-clr);
 `
 
-export const PageTertiaryDescription = styled(PageDescriptionBase)`
+export const PageTertiaryDescription = styled(BasePageDescription)`
     color: var(--tx-td-clr);
 `
 
