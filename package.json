@@ -1,16 +1,12 @@
 {
   "name": "nrvm",
   "description": "Not ReVanced Manager. A web-app for patching ReVanced-supported applications.",
-  "version": "0.1.0",
+  "version": "0.1.0-dev",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.5.2",
-    "@types/node": "^16.11.47",
-    "@types/react": "^18.0.15",
-    "@types/react-dom": "^18.0.6",
     "framer-motion": "^7.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -22,9 +18,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -46,6 +42,13 @@
     ]
   },
   "devDependencies": {
-    "@types/styled-components": "^5.1.25"
+    "@types/content-disposition": "^0.5.5",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.11.47",
+    "@types/react": "^18.0.15",
+    "@types/react-dom": "^18.0.6",
+    "@types/styled-components": "^5.1.25",
+    "node-polyfill-webpack-plugin": "^2.0.1",
+    "react-app-rewired": "^2.2.1"
   }
 }
