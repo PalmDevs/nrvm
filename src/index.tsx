@@ -5,28 +5,28 @@ import ReactDOM from 'react-dom/client'
 import reportWebVitals from './reportWebVitals'
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import { AboutPage, MainPage, UnknownPage } from './pages'
-import WithBottomNavbar from './pages/with/WithBottomNavbar'
+import RouteList, { RouteResolvable } from './data/Routes'
+
+export function mapRouteList(routes: RouteResolvable[], maxLength = 15, i = 0) {
+    return i > maxLength ? [] : routes.map(list => {
+        return <Route {...list}>
+            {mapRouteList(list.subroutes ?? [], maxLength, i + 1)}
+        </Route>
+    })
+}
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+    document.getElementById('root') as HTMLElement
 )
 
 root.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<WithBottomNavbar />}>
-            <Route index element={<MainPage />} />
-            <Route path='*' element={<UnknownPage />} />
-        </Route>
-
-        <Route path='/*' element={<WithBottomNavbar showBackButton />}>       
-          <Route path='about' element={<AboutPage />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
-  </React.StrictMode>
+    <React.StrictMode>
+        <BrowserRouter>
+            <Routes>
+                {mapRouteList(RouteList)}
+            </Routes>
+        </BrowserRouter>
+    </React.StrictMode>
 )
 
 // If you want to start measuring performance in your app, pass a function
