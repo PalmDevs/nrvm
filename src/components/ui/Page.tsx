@@ -1,21 +1,14 @@
 import styled from 'styled-components'
-import { motion, Variants } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { ReactNode } from 'react'
-
-
-export const PageAnimations: Variants = {
-    enter: { opacity: 0 },
-    stay: { opacity: 1 },
-    exit: { opacity: 0 }
-}
-
+import createAnimationPropsFor, { FadeTo } from '../../animations'
 
 export const BasePage = styled(motion.div)`
     background-color: var(--bg-pr-clr);
     color: var(--tx-pr-clr);
 
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
 
     display: flex;
     align-items: center;
@@ -26,7 +19,7 @@ export const BasePage = styled(motion.div)`
 
 export function Page({ children }: PageProps) {
     return (
-        <BasePage variants={PageAnimations} initial='enter' animate='stay' exit='exit'>
+        <BasePage {...createAnimationPropsFor(FadeTo)}>
             {children}
         </BasePage>
     )

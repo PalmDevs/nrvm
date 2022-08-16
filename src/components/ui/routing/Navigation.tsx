@@ -2,6 +2,8 @@ import { MouseEventHandler, ReactNode } from 'react'
 import { IconType } from 'react-icons'
 import styled from 'styled-components'
 import { DynamicLink } from './Link'
+import { motion } from 'framer-motion'
+import createAnimationPropsFor, { FadeInFrom } from '../../../animations'
 
 const NavIconButtonElement = styled(DynamicLink)`
     width: 4rem;
@@ -29,9 +31,9 @@ export function NavIconButton(props: NavIconButtonProps) {
 }
 
 export function NavContainer({ children, location }: NavContainerProps) {
-    return <div style={{ display: 'grid', columnGap: '1rem', rowGap: '1rem', gridAutoFlow: 'column', margin: '1rem', position: 'fixed', bottom: 0, [location]: 0 }}>
+    return <motion.div {...createAnimationPropsFor(FadeInFrom('right'))} style={{ display: 'grid', columnGap: '1rem', rowGap: '1rem', gridAutoFlow: 'column', margin: '1rem', position: 'fixed', bottom: 0, [location]: 0 }}>
         {children}
-    </div>
+    </motion.div>
 }
 
 export interface NavContainerProps {

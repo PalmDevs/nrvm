@@ -9,9 +9,9 @@ export default function UnknownPage() {
             <PageIcon src='/assets/icons/error.svg' />
             <PageTitle>Watch where you're going!</PageTitle>
             <PageDescription>
-                You're almost fell. This link leads to nowhere...
+                This link leads to nowhere...
                 <br />
-                Click the button to go back to the camp.</PageDescription>
+                Click the button to go back to the home page.</PageDescription>
             <SecondaryLink to='/'>Take me there!</SecondaryLink>
         </Page>
     )
