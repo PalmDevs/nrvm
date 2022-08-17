@@ -16,7 +16,7 @@ export const BasePage = styled(motion.div)`
     flex-direction: column;
 
     // For Navbar
-    @media screen and (max-aspect-ratio: 9.25/9) {
+    @media screen and (max-aspect-ratio: 14/16) {
         padding-bottom: 4rem;
     }
 `
