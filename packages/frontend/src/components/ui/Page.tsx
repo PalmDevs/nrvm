@@ -14,6 +14,11 @@ export const BasePage = styled(motion.div)`
     align-items: center;
     justify-content: center;
     flex-direction: column;
+
+    // For Navbar
+    @media screen and (max-aspect-ratio: 9.25/9) {
+        padding-bottom: 4rem;
+    }
 `
 
 
