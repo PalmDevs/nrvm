@@ -6,7 +6,6 @@ import styled from 'styled-components'
 const TextLinkElement = styled(DynamicLink)`
     color: ${(props: TextLinkProps & ExtraLinkProps) => props.textColor || 'currentColor'};
     font-weight: ${(props: TextLinkProps & ExtraLinkProps) => props.fontWeight || 'normal'};
-    font-size: 1.125rem;
     color: ${(props: TextLinkProps & ExtraLinkProps) => props.textColor};
     text-decoration: underline;
     transition: all 0.25s;
@@ -36,7 +35,7 @@ const BaseLinkElement = styled(Link)`
 `
 
 
-export function DynamicLink<P extends (({ className?: string, children?: ReactNode } & ({ to: string, external?: boolean } | { action: MouseEventHandler<HTMLDivElement> }) & Omit<LinkProps, 'to'>))>(props: P) {
+export function DynamicLink<P extends (({ className?: string, children?: ReactNode } & ({ to: string, external?: boolean } | { action: MouseEventHandler<HTMLDivElement> }) & Pick<LinkProps, 'onClick'>))>(props: P) {
     if ('action' in props) {
         return (
             <div className={props.className} onClick={props.action}>
