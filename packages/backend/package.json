@@ -1,0 +1,19 @@
+{
+  "name": "nrvm-backend",
+  "version": "0.1.0-dev",
+  "private": true,
+  "description": "Not ReVanced Manager Backend. A REST and WebSocket API for patching ReVanced-supported applications.",
+  "scripts": {
+    "start": "npm run build && node ./build",
+    "build": "ttsc"
+  },
+  "devDependencies": {
+    "@zerollup/ts-transform-paths": "^1.7.18",
+    "ttypescript": "^1.5.13"
+  },
+  "dependencies": {
+    "fastify": "^4.5.0",
+    "nodejs-file-downloader": "^4.10.1",
+    "octokit": "^2.0.7"
+  }
+}
