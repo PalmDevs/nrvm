@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import Divider from './Divider'
-import ContributorsList from '../../data/Contributors'
+import ContributorsList from '../../data/Contributors.json'
+import { TextLink } from './routing/Link'
 
 export const ContributorContainer = styled.div`
     margin: 0.75rem;
@@ -24,7 +25,7 @@ export function Contributors() {
                     <ContributorContainer>
                         <ContributorContainerTitle>{title}</ContributorContainerTitle>
                         <Divider strokeWidth='0.125rem' strokeColor='#FFF2' />
-                        {contributors.map((ctb) => ctb.name).join(', ')}
+                        {contributors.map((ctb, i) => [i > 0 && ', ', 'link' in ctb && ctb.link ? <TextLink external key={i} to={ctb.link}>{ctb.name}</TextLink> : <p key={i} style={{ margin: 0 }}>{ctb.name}</p>])}
                     </ContributorContainer>
                 )
             })}
