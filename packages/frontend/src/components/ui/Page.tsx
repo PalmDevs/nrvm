@@ -63,6 +63,10 @@ export const PageTertiaryDescription = styled(BasePageDescription)`
     color: var(--tx-td-clr);
 `
 
+export const PageFooter = styled(PageTertiaryDescription)`
+    font-size: 0.75rem;
+`
+
 
 export interface PageProps {
     children?: ReactNode
