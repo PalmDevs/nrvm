@@ -15,7 +15,7 @@ export const BasePage = styled(motion.div)`
     justify-content: center;
     flex-direction: column;
 
-    // For Navbar
+    // Bottom space for mobiles, so navbar doesn't cover it
     @media screen and (max-aspect-ratio: 14/16) {
         padding-bottom: 4rem;
     }

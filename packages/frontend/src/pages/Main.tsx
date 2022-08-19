@@ -1,15 +1,16 @@
 import { PrimaryLink } from '../components/ui/routing/Link'
 import { Page, PageDescription, PageIcon, PageTitle } from '../components/ui/Page'
 import DocumentTitle from '../util/DocumentTitle'
+import Constants from '../data/Constants.json'
 
 export default function MainPage() {
     return (
         <Page>
             <DocumentTitle title='NRVM ➜ Welcome' />
             <PageIcon src='/assets/mascot/cropped-circle.svg' />
-            <PageTitle>Not ReVanced Manager</PageTitle>
+            <PageTitle>{Constants.app.longName}</PageTitle>
             <PageDescription>
-                A web-app for patching ReVanced-supported applications.
+                {Constants.app.description}
                 <br/>
                 Get started now and explore your options!
             </PageDescription>

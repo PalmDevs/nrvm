@@ -1,0 +1,9 @@
+{
+    "app": {
+        "name": "NRVM",
+        "longName": "Not ReVanced Manager",
+        "description": "A web-app for patching ReVanced-supported applications.",
+        "license": "MIT",
+        "warranties": "Not responible for any damages"
+    }
+}

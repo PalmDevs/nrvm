@@ -1,12 +1,12 @@
 [
     { "title": "Project Leader", "contributors": [
-        { "name": "PalmDevs", "pfp": null, "link": "https://github.com/PalmDevs" }
+        { "name": "Palm", "pfp": null, "link": "https://github.com/PalmDevs" }
     ] },
     { "title": "Inspiration", "contributors": [
-        { "name": "reisxd", "pfp": null, "link": "https://github.com/reisxd" }
+        { "name": "Reis Can", "pfp": null, "link": "https://github.com/reisxd" }
     ] },
     { "title": "Shoutouts", "contributors": [
-        { "name": "Canny1913", "pfp": null, "link": "https://github.com/Canny1913" },
+        { "name": "Canny", "pfp": null, "link": "https://github.com/Canny1913" },
         { "name": "lotusdroid", "pfp": null, "link": "https://github.com/lotusdroid" }
     ] }
 ]
