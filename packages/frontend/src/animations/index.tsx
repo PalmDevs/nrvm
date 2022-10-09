@@ -1,13 +1,14 @@
-import { Variants } from 'framer-motion'
+import { Variant } from 'framer-motion'
+import SlideFade from './SlideFade'
 
-export default function createAnimationPropsFor(animation: Variants) {
-    return {
-        initial: 'enter',
-        animate: 'stay',
-        exit: 'exit',
-        variants: animation
+const Animations = {
+    SlideFade,
+    create(animation: Animation) {
+        return { variants: animation, initial: 'enter', animate: 'stay', exit: 'exit' }
     }
 }
 
-export { default as FadeTo } from './FadeTo'
-export { default as FadeInFrom } from './FadeInFrom'
+export default Animations
+
+export type Animation = { [V in 'enter' | 'stay' | 'exit']: Variant }
+export type Direction = 'up' | 'down' | 'left' | 'right'

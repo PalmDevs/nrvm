@@ -1,4 +1,11 @@
-export { default as AboutPage } from './About'
-export { default as DependenciesPage } from './Dependencies'
-export { default as MainPage } from './Main'
-export { default as UnknownPage } from './Unknown'
+import Main from './Main'
+import Unknown from './Unknown'
+import About from './About'
+
+const Pages = {
+    Main,
+    About,
+    Unknown
+}
+
+export default Pages

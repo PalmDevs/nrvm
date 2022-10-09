@@ -1,18 +1,16 @@
-import { SecondaryLink } from '../components/ui/routing/Link'
-import { Page, PageDescription, PageIcon, PageTitle } from '../components/ui/Page'
-import DocumentTitle from '../util/DocumentTitle'
+import Document from '../components/util/Document'
+import Page from '../components/ui/Page'
+import Navigation from '../components/ui/Navigation'
 
 export default function UnknownPage() {
     return (
         <Page>
-            <DocumentTitle title='NRVM ➜ 404' />
-            <PageIcon src='/assets/icons/error.svg' />
-            <PageTitle>Watch where you're going!</PageTitle>
-            <PageDescription>
-                This link leads to nowhere...
-                <br />
-                Click the button to go back to the home page.</PageDescription>
-            <SecondaryLink to='/'>Take me there!</SecondaryLink>
+            <Document.Title title='404' />
+            <Page.HeroIcon src='/assets/error.svg' />
+            <Page.Title>Uh oh! 404</Page.Title>
+            <Page.Description>This page doesn't exist.</Page.Description>
+            <Page.Description>Do you want to go back to the home page?</Page.Description>
+            <Navigation.ButtonSecondary to='/'>Take me there</Navigation.ButtonSecondary>
         </Page>
     )
 }
